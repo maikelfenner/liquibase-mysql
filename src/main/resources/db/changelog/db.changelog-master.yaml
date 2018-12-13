@@ -1,0 +1,12 @@
+url: jdbc:mysql://localhost:3306/liquibase-db
+username: root
+password:
+driver: com.mysql.jdbc.Driver
+
+databaseChangeLog:
+  - include:
+      file: migrations/001_create_database.sql
+      relativeToChangelogFile: true
+  - include:
+      file: migrations/002_alter_table_image__add_description.sql
+      relativeToChangelogFile: true
